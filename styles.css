@@ -131,3 +131,10 @@
   background-color: #E5383B;
   border-radius: 3px 3px 0 0;
 }
+.window-content {
+  padding: 5px;
+  font-size: 0.8rem;
+}
+.window-content > h2 {
+  font-size: 1rem;
+}
