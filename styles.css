@@ -10,6 +10,7 @@
   padding: 0;
 }
 .wrapper {
+  position: relative;
   width: 100vw;
   height: 100vh;
   background-image: url('img/anotherOS-wallpaper.jpg');
@@ -17,6 +18,7 @@
   background-size: cover;
   background-attachment: fixed;
 }
+/* Navigation */
 .header {
   display: flex;
   justify-content: space-between;
@@ -24,13 +26,14 @@
   width: 100%;
   color: var(--main-font-color-dark);
   background-color: var(--header-bar-color);
-  border-bottom: 2px inset black;
+  border-bottom: 2px outset black;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
 .nav {
   display: flex;
+  z-index: 10;
 }
 .nav-list {
   display: flex;
@@ -57,8 +60,8 @@
   position: absolute;
   top: 100%;
   left: 0;
-  box-shadow: 5px 20px 20px #0B090A;
-  border-radius: 0 0 15px 15px;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 5px 3px 10px -5px #0B090A;
   list-style-type: none;
 }
 .inner-item {
@@ -66,7 +69,7 @@
   font-size: 0.9rem;
   color: initial;
   background-color: var(--header-bar-color);
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid #e5383b25;
 }
 .inner-item:last-of-type {
   border-radius: 0 0 3px 3px;
@@ -75,7 +78,7 @@
 .nav-item:hover > .inner-list {
   display: block;
 }
-.nav-item:hover .inner-list,
+
 .nav-item:hover,
 .inner-item:hover {
   background-color: var(--header-nav-hover);
@@ -95,6 +98,7 @@
   box-shadow: 0 0 1px #0B090A;
   border: 5px solid #F5F3F4;
 }
+/* Date & Time */
 .date-time {
   display: flex;
   align-items: center;
@@ -105,4 +109,25 @@
   display: flex;
   align-items: center;
   color:#0B090A;
+}
+/* Main */
+.main {
+  position: relative;
+}
+.window {
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  left: 10px;
+  width: 300px;
+  height: 200px;
+  background-color: #F5F3F4;
+  border-radius: 3px;
+}
+.window-header {
+  width: 100%;
+  height: 10px;
+  position: relative;
+  background-color: #E5383B;
+  border-radius: 3px 3px 0 0;
 }
