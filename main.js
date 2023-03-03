@@ -1,23 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 document.addEventListener('mousedown', (e) => {
 
   if (e.target.className === 'window-header') {
@@ -38,7 +20,7 @@ function getMousePos(element) {
   document.onmousemove = e => {
     main.style.top = (e.y - mouseY) + 'px';
     main.style.left = (e.x - mouseX) + 'px';
-  }
+  };
 };
 
 function stopDrag() {
