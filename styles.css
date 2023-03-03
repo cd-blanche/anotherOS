@@ -17,6 +17,7 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  overflow: hidden;
 }
 /* Navigation */
 .header {
@@ -112,7 +113,6 @@
 }
 /* Main */
 .main {
-  position: relative;
 }
 .window {
   position: absolute;
@@ -123,6 +123,12 @@
   height: 200px;
   background-color: #F5F3F4;
   border-radius: 3px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+.window ul {
+  padding-left: 15px;
 }
 .window-header {
   width: 100%;
